@@ -1,4 +1,5 @@
-## ML-Model-Flask-Deployment
+## Smart Health Prediction
+<img src="https://github.com/palashsinghai/Smart-Health-Prediction-Model/blob/main/heartbeat.png?raw=true" width=100 height=100 >
 This is a demo project to elaborate how Machine Learn Models are deployed on production using Flask API
 
 ### Prerequisites
