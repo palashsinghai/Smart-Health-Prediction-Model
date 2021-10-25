@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Salary Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <! -- Gender Age BMI Blood Pressure (Systolic) Blood Pressure (Diastolic)  Respiration Rate(beats/minute)  Pulse Rate  Body Temperature  Chest Pain  Drinking/Smoking -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Gender" placeholder="Gender" required="required" />
+        <input type="text" name="Age" placeholder="Age" required="required" />
+		<input type="text" name="BMI" placeholder="BMI" required="required" />
+    <input type="text" name="Blood Pressure (Systolic)" placeholder="Blood Pressure (Systolic)" required="required" />
+    <input type="text" name="Blood Pressure (Diastolic)" placeholder="Blood Pressure (Diastolic)" required="required" />
+    <input type="text" name="Respiration Rate(beats/minute)" placeholder="Respiration Rate(beats/minute)" required="required" />
+    <input type="text" name="Pulse Rate" placeholder="Pulse Rate" required="required" />
+    <input type="text" name="Body Temperature" placeholder="Body Temperature" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
